@@ -1,0 +1,1 @@
+typedef Modifiers<T extends Enum> = Map<T, int>;
