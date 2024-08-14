@@ -1,26 +1,16 @@
 import 'package:daily_battle/core/enums/damage_type.dart';
 import 'package:daily_battle/core/enums/dice.dart';
+import 'package:daily_battle/core/enums/weapon_category.dart';
+import 'package:daily_battle/core/enums/weapon_range.dart';
 import 'package:daily_battle/core/models/weapon.dart';
-import 'package:daily_battle/core/models/weapon_category.dart';
-import 'package:daily_battle/core/models/weapon_range.dart';
-
-class WeaponCategoryTypes {
-  static const martial = WeaponCategory(name: 'Marcial', originalName: 'Martial');
-  static const simple = WeaponCategory(name: 'Simples', originalName: 'Simple');
-}
-
-class WeaponRangeTypes {
-  static const melee = WeaponRange(name: 'Corpo a Corpo', originalName: 'Melee');
-  static const ranged = WeaponRange(name: 'À Distância', originalName: 'Ranged');
-}
 
 class WeaponTypes {
   // Armas Simples Corpo a Corpo
   static const club = Weapon(
     name: 'Clava',
     originalName: 'Club',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d4: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -28,8 +18,8 @@ class WeaponTypes {
   static const dagger = Weapon(
     name: 'Adaga',
     originalName: 'Dagger',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d4: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -37,8 +27,8 @@ class WeaponTypes {
   static const handaxe = Weapon(
     name: 'Machadinha',
     originalName: 'Handaxe',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -46,8 +36,8 @@ class WeaponTypes {
   static const javelin = Weapon(
     name: 'Azagaia',
     originalName: 'Javelin',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -55,8 +45,8 @@ class WeaponTypes {
   static const hammer = Weapon(
     name: 'Martelo',
     originalName: 'Hammer',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d4: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -64,8 +54,8 @@ class WeaponTypes {
   static const mace = Weapon(
     name: 'Maça',
     originalName: 'Mace',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -73,8 +63,8 @@ class WeaponTypes {
   static const quarterstaff = Weapon(
     name: 'Bastão',
     originalName: 'Quarterstaff',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -82,8 +72,8 @@ class WeaponTypes {
   static const scimitar = Weapon(
     name: 'Cimitarra',
     originalName: 'Scimitar',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -91,8 +81,8 @@ class WeaponTypes {
   static const sickle = Weapon(
     name: 'Foice',
     originalName: 'Sickle',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d4: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -100,8 +90,8 @@ class WeaponTypes {
   static const spear = Weapon(
     name: 'Lança',
     originalName: 'Spear',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.simple,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -111,8 +101,8 @@ class WeaponTypes {
   static const dart = Weapon(
     name: 'Dardo',
     originalName: 'Dart',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.ranged,
+    category: WeaponCategory.simple,
+    range: WeaponRange.ranged,
     damage: {
       Dice.d4: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -120,8 +110,8 @@ class WeaponTypes {
   static const handCrossbow = Weapon(
     name: 'Besta de Mão',
     originalName: 'Hand Crossbow',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.ranged,
+    category: WeaponCategory.simple,
+    range: WeaponRange.ranged,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -129,8 +119,8 @@ class WeaponTypes {
   static const shortbow = Weapon(
     name: 'Arco Curto',
     originalName: 'Shortbow',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.ranged,
+    category: WeaponCategory.simple,
+    range: WeaponRange.ranged,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -138,8 +128,8 @@ class WeaponTypes {
   static const sling = Weapon(
     name: 'Funda',
     originalName: 'Sling',
-    category: WeaponCategoryTypes.simple,
-    range: WeaponRangeTypes.ranged,
+    category: WeaponCategory.simple,
+    range: WeaponRange.ranged,
     damage: {
       Dice.d4: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -149,8 +139,8 @@ class WeaponTypes {
   static const battleaxe = Weapon(
     name: 'Machado de Batalha',
     originalName: 'Battleaxe',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -158,8 +148,8 @@ class WeaponTypes {
   static const flail = Weapon(
     name: 'Mangual',
     originalName: 'Flail',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -167,8 +157,8 @@ class WeaponTypes {
   static const glaive = Weapon(
     name: 'Glaive',
     originalName: 'Glaive',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d10: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -176,8 +166,8 @@ class WeaponTypes {
   static const greataxe = Weapon(
     name: 'Machado Grande',
     originalName: 'Greataxe',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d12: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -185,8 +175,8 @@ class WeaponTypes {
   static const greatsword = Weapon(
     name: 'Espada Grande',
     originalName: 'Greatsword',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 2, damageType: DamageType.slashing),
     },
@@ -194,8 +184,8 @@ class WeaponTypes {
   static const halberd = Weapon(
     name: 'Alabarda',
     originalName: 'Halberd',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d10: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -203,8 +193,8 @@ class WeaponTypes {
   static const longsword = Weapon(
     name: 'Espada Longa',
     originalName: 'Longsword',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -212,8 +202,8 @@ class WeaponTypes {
   static const morningstar = Weapon(
     name: 'Maça Estrela',
     originalName: 'Morningstar',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -221,8 +211,8 @@ class WeaponTypes {
   static const pike = Weapon(
     name: 'Lança Longa',
     originalName: 'Pike',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d10: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -230,8 +220,8 @@ class WeaponTypes {
   static const rapier = Weapon(
     name: 'Florete',
     originalName: 'Rapier',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -239,8 +229,8 @@ class WeaponTypes {
   static const shortsword = Weapon(
     name: 'Espada Curta',
     originalName: 'Shortsword',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.slashing),
     },
@@ -248,8 +238,8 @@ class WeaponTypes {
   static const trident = Weapon(
     name: 'Tridente',
     originalName: 'Trident',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d6: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -257,8 +247,8 @@ class WeaponTypes {
   static const warhammer = Weapon(
     name: 'Martelo de Guerra',
     originalName: 'Warhammer',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.melee,
+    category: WeaponCategory.martial,
+    range: WeaponRange.melee,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.bludgeoning),
     },
@@ -268,8 +258,8 @@ class WeaponTypes {
   static const heavyCrossbow = Weapon(
     name: 'Besta Pesada',
     originalName: 'Heavy Crossbow',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.ranged,
+    category: WeaponCategory.martial,
+    range: WeaponRange.ranged,
     damage: {
       Dice.d10: (quantity: 1, damageType: DamageType.piercing),
     },
@@ -277,8 +267,8 @@ class WeaponTypes {
   static const longbow = Weapon(
     name: 'Arco Longo',
     originalName: 'Longbow',
-    category: WeaponCategoryTypes.martial,
-    range: WeaponRangeTypes.ranged,
+    category: WeaponCategory.martial,
+    range: WeaponRange.ranged,
     damage: {
       Dice.d8: (quantity: 1, damageType: DamageType.piercing),
     },

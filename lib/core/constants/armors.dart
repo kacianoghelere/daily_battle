@@ -1,100 +1,26 @@
-import 'package:daily_battle/core/enums/damage_type.dart';
 import 'package:daily_battle/core/models/armor.dart';
-import 'package:daily_battle/core/models/armor_category.dart';
-
-class ArmorCategoryTypes {
-  static const light = ArmorCategory(name: 'Leve', originalName: 'Light');
-  static const medium = ArmorCategory(name: 'Média', originalName: 'Medium');
-  static const heavy = ArmorCategory(name: 'Pesada', originalName: 'Heavy');
-  static const shield = ArmorCategory(name: 'Escudo', originalName: 'Shield');
-}
 
 class ArmorTypes {
   // Armaduras Leves
-  static const padded = Armor.emptyModifiers(
-    name: 'Almofadada',
-    originalName: 'Padded',
-    category: ArmorCategoryTypes.light,
-    defense: 1,
-  );
-  static const leather = Armor.emptyModifiers(
-    name: 'Couro',
-    originalName: 'Leather',
-    category: ArmorCategoryTypes.light,
-    defense: 2,
-  );
-  static const studdedLeather = Armor.emptyModifiers(
-    name: 'Couro Batido',
-    originalName: 'Studded Leather',
-    category: ArmorCategoryTypes.light,
-    defense: 3,
-  );
+  static final leather = Armor.light(name: 'Couro', originalName: 'Leather', defense: 2);
+  static final padded = Armor.light(name: 'Almofadada', originalName: 'Padded', defense: 1);
+  static final studdedLeather = Armor.light(name: 'Couro Batido', originalName: 'Studded Leather', defense: 3);
 
   // Armaduras Médias
-  static const hide = Armor.emptyModifiers(
-    name: 'Couro Endurecido',
-    originalName: 'Hide',
-    category: ArmorCategoryTypes.medium,
-    defense: 2,
-  );
-  static const chainShirt = Armor.emptyModifiers(
-    name: 'Camisa de Malha',
-    originalName: 'Chain Shirt',
-    category: ArmorCategoryTypes.medium,
-    defense: 4,
-  );
-  static const scaleMail = Armor.emptyModifiers(
-    name: 'Cota de Escamas',
-    originalName: 'Scale Mail',
-    category: ArmorCategoryTypes.medium,
-    defense: 4,
-  );
-  static const breastplate = Armor.emptyModifiers(
-    name: 'Peitoral',
-    originalName: 'Breastplate',
-    category: ArmorCategoryTypes.medium,
-    defense: 5,
-  );
-  static const halfPlate = Armor.emptyModifiers(
-    name: 'Meia Armadura',
-    originalName: 'Half Plate',
-    category: ArmorCategoryTypes.medium,
-    defense: 5,
-  );
+  static final breastplate = Armor.medium(name: 'Peitoral', originalName: 'Breastplate', defense: 5);
+  static final chainShirt = Armor.medium(name: 'Camisa de Malha', originalName: 'Chain Shirt', defense: 4);
+  static final halfPlate = Armor.medium(name: 'Meia Armadura', originalName: 'Half Plate', defense: 5);
+  static final hide = Armor.medium(name: 'Couro Endurecido', originalName: 'Hide', defense: 2);
+  static final scaleMail = Armor.medium(name: 'Cota de Escamas', originalName: 'Scale Mail', defense: 4);
 
   // Armaduras Pesadas
-  static const ringMail = Armor.emptyModifiers(
-    name: 'Cota de Anéis',
-    originalName: 'Ring Mail',
-    category: ArmorCategoryTypes.heavy,
-    defense: 4,
-  );
-  static const chainMail = Armor.emptyModifiers(
-    name: 'Cota de Malha',
-    originalName: 'Chain Mail',
-    category: ArmorCategoryTypes.heavy,
-    defense: 6,
-  );
-  static const splint = Armor.emptyModifiers(
-    name: 'Cota de Talas',
-    originalName: 'Splint',
-    category: ArmorCategoryTypes.heavy,
-    defense: 6,
-  );
-  static const plate = Armor.emptyModifiers(
-    name: 'Armadura Completa',
-    originalName: 'Plate',
-    category: ArmorCategoryTypes.heavy,
-    defense: 8,
-  );
+  static final chainMail = Armor.heavy(name: 'Cota de Malha', originalName: 'Chain Mail', defense: 6);
+  static final plate = Armor.heavy(name: 'Armadura Completa', originalName: 'Plate', defense: 8);
+  static final ringMail = Armor.heavy(name: 'Cota de Anéis', originalName: 'Ring Mail', defense: 4);
+  static final splint = Armor.heavy(name: 'Cota de Talas', originalName: 'Splint', defense: 6);
 
   // Escudos
-  static const shield = Armor.emptyModifiers(
-    name: 'Escudo',
-    originalName: 'Shield',
-    category: ArmorCategoryTypes.shield,
-    defense: 2,
-  );
+  static final shield = Armor.shield(name: 'Escudo', originalName: 'Shield', defense: 2);
 
   static List<Armor> toList() {
     return [
