@@ -14,3 +14,14 @@ enum ArmorCategory {
     };
   }
 }
+
+extension ArmorCategoryExtension on ArmorCategory {
+  String get name {
+    return switch (this) {
+      ArmorCategory.light => 'light',
+      ArmorCategory.medium => 'medium',
+      ArmorCategory.heavy => 'heavy',
+      ArmorCategory.shield => 'shield',
+    };
+  }
+}

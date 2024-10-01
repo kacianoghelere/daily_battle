@@ -19,13 +19,7 @@ class DiceRoller {
   static final Random _random = Random();
 
   static int _rollDice(Dice dice) {
-    final sides = Dice.getSides(dice);
-
-    if (sides < 1) {
-      throw ArgumentError('O número de faces deve ser pelo menos 1.');
-    }
-
-    return _random.nextInt(sides) + 1;
+    return _random.nextInt(dice.sides) + 1;
   }
 
   static DiceRollerResult roll({required DiceConfiguration diceConfiguration}) {

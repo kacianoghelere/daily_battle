@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "krg-daily-battle",
+          "appId": "1:922511416045:android:ae2703cbad19039aefcae4",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "krg-daily-battle",
+          "configurations": {
+            "android": "1:922511416045:android:ae2703cbad19039aefcae4",
+            "ios": "1:922511416045:ios:805278973d5e457aefcae4"
+          }
+        }
+      }
+    }
+  }
+}

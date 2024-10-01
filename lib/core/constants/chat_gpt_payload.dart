@@ -1,9 +1,10 @@
-import 'package:daily_battle/core/enums/chat_gpt.dart';
+import 'package:daily_battle/core/enums/chat_gpt_model.dart';
+import 'package:daily_battle/core/enums/chat_gpt_role.dart';
 import 'package:daily_battle/core/models/chat_gpt_message.dart';
 import 'package:daily_battle/core/models/chat_gpt_payload.dart';
 
-final CHAT_GPT_PAYLOAD = ChatGptPayload(
-  model: ChatGptModel.gpt_4,
+const chatGptPayload = ChatGptPayload(
+  model: ChatGptModel.gpt_4o,
   messages: [
     ChatGptMessage(
       role: ChatGptMessageRole.system,

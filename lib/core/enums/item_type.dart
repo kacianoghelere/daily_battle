@@ -14,3 +14,14 @@ enum ItemType {
     };
   }
 }
+
+extension ItemTypeExtension on ItemType {
+  String get name {
+    return switch (this) {
+      ItemType.armor => 'armor',
+      ItemType.consumable => 'consumable',
+      ItemType.miscellaneous => 'miscellaneous',
+      ItemType.weapon => 'weapon',
+    };
+  }
+}

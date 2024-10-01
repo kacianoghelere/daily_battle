@@ -14,3 +14,14 @@ enum Attribute {
     };
   }
 }
+
+extension AttributeExtension on Attribute {
+  String get name {
+    return switch (this) {
+      Attribute.strength => 'strength',
+      Attribute.agility => 'agility',
+      Attribute.intellect => 'intellect',
+      Attribute.charisma => 'charisma',
+    };
+  }
+}

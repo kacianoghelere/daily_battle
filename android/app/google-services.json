@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "922511416045",
+    "project_id": "krg-daily-battle",
+    "storage_bucket": "krg-daily-battle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922511416045:android:ae2703cbad19039aefcae4",
+        "android_client_info": {
+          "package_name": "com.krg.daily_battle.daily_battle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922511416045-gs3imq7u5cp80k1brclvlhfo7td5d988.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaqdYVAkQPxidhsss1dbp10rmIJaYV7g8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922511416045-gs3imq7u5cp80k1brclvlhfo7td5d988.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

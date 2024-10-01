@@ -33,10 +33,10 @@ class Weapon extends Item implements Rollable {
     );
   }
 
-  static WeaponDamage _parseWeaponDamage(Map<String, dynamic> damageJson) {
+  static WeaponDamage _parseWeaponDamage(Map<String, dynamic> data) {
     final damage = <Dice, ({int quantity, DamageType damageType})>{};
 
-    damageJson.forEach((key, value) {
+    data.forEach((key, value) {
       final dice = Dice.parse(key);
       final quantity = value['quantity'] as int;
       final damageType = DamageType.parse(value['damageType'] as String);

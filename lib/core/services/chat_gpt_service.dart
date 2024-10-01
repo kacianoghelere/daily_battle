@@ -1,24 +1,36 @@
 import 'dart:convert';
-import 'package:daily_battle/core/constants/chat_gpt_payload.dart';
+import 'package:daily_battle/core/exceptions/chat_gpt_exception.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
+import 'package:logger/logger.dart';
 
 class ChatGptService {
-  Future<String> fetchEnemyInfo() async {
+  static Future<String> fetchData({required Object payload}) async {
+    Logger logger = Logger();
+
+    logger.d('VAI TENTAR COMUNICAR');
+
     final response = await http.post(
-      Uri.parse('https://api.openai.com/v1/chat/completions'),
+      Uri.parse(dotenv.env['OPEN_AI_API_URL']!),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_API_KEY',
+        'Authorization': 'Bearer ${dotenv.env['CHATGPT_API_KEY']!}',
       },
-      body: CHAT_GPT_PAYLOAD.toJson(),
+      body: jsonEncode(payload)
     );
 
+    logger.d(response.statusCode);
+
     if (response.statusCode == 200) {
+      logger.d('CONSEGUIU COMUNICAR');
+      logger.d(response.body);
+
       final data = jsonDecode(response.body);
 
       return data['choices'][0]['message']['content'];
     } else {
-      return 'Erro ao obter informações';
+      logger.e('NÃO CONSEGUIU COMUNICAR');
+      throw ChatGptException('Erro ao obter informações');
     }
   }
 }

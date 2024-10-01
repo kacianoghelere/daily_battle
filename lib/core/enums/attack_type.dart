@@ -12,3 +12,13 @@ enum AttackType {
     };
   }
 }
+
+extension AttackTypeExtension on AttackType {
+  String get name {
+    return switch (this) {
+      AttackType.melee => 'melee',
+      AttackType.ranged => 'ranged',
+      AttackType.spell => 'spell',
+    };
+  }
+}

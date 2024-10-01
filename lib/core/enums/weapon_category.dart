@@ -10,3 +10,12 @@ enum WeaponCategory {
     };
   }
 }
+
+extension WeaponCategoryExtension on WeaponCategory {
+  String get name {
+    return switch (this) {
+      WeaponCategory.simple => 'simple',
+      WeaponCategory.martial => 'martial'
+    };
+  }
+}

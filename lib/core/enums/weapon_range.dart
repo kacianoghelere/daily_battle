@@ -10,3 +10,12 @@ enum WeaponRange {
     };
   }
 }
+
+extension WeaponRangeExtension on WeaponRange {
+  String get name {
+    return switch (this) {
+      WeaponRange.melee => 'melee',
+      WeaponRange.ranged => 'ranged'
+    };
+  }
+}
